@@ -1,536 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Fridgy</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #1C2D5E;
-      background: #F6F3EE;
-      padding: 0;
-    }
-
-    /* Header */
-    .header {
-      background: linear-gradient(135deg, #1C2D5E, #3A4F82);
-      padding: 48px 40px 40px;
-      text-align: center;
-    }
-    .header-logo { font-size: 40px; margin-bottom: 12px; }
-    .header h1 {
-      font-size: 28px;
-      font-weight: 800;
-      color: white;
-      letter-spacing: -0.5px;
-    }
-    .header-sub {
-      font-size: 14px;
-      color: rgba(255,255,255,0.6);
-      margin-top: 8px;
-      font-weight: 600;
-    }
-    .effective-badge {
-      display: inline-block;
-      margin-top: 16px;
-      background: #3EC9C2;
-      color: white;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 6px 16px;
-      border-radius: 20px;
-      letter-spacing: 0.3px;
-    }
-
-    /* Nav pills */
-    .nav {
-      background: white;
-      padding: 16px 40px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      border-bottom: 1px solid #EAE5DC;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav a {
-      font-size: 12px;
-      font-weight: 700;
-      color: #6B7A99;
-      text-decoration: none;
-      padding: 6px 14px;
-      border-radius: 20px;
-      background: #F6F3EE;
-      transition: all 0.2s;
-    }
-    .nav a:hover { background: #E5F7F6; color: #27A69F; }
-
-    /* Content */
-    .content { max-width: 780px; margin: 0 auto; padding: 40px 40px 80px; }
-
-    /* Summary box */
-    .summary {
-      background: #E5F7F6;
-      border: 2px solid #A8EDE9;
-      border-radius: 16px;
-      padding: 24px 28px;
-      margin-bottom: 40px;
-    }
-    .summary h2 {
-      font-size: 16px;
-      font-weight: 800;
-      color: #27A69F;
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .summary ul { list-style: none; }
-    .summary li {
-      font-size: 14px;
-      font-weight: 600;
-      color: #1C2D5E;
-      padding: 5px 0;
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      line-height: 1.5;
-    }
-    .summary li::before { content: "✓"; color: #3EC9C2; font-weight: 900; flex-shrink: 0; margin-top: 1px; }
-
-    /* Sections */
-    .section { margin-bottom: 40px; }
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 18px;
-      padding-bottom: 14px;
-      border-bottom: 2px solid #EAE5DC;
-    }
-    .section-icon {
-      width: 42px;
-      height: 42px;
-      background: linear-gradient(135deg, #1C2D5E, #3A4F82);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-    .section h2 {
-      font-size: 20px;
-      font-weight: 800;
-      color: #1C2D5E;
-    }
-    .section-num {
-      font-size: 11px;
-      font-weight: 700;
-      color: #6B7A99;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    p {
-      font-size: 15px;
-      line-height: 1.75;
-      color: #3d3d5c;
-      margin-bottom: 14px;
-    }
-
-    /* Info cards */
-    .card {
-      background: white;
-      border-radius: 14px;
-      padding: 20px 22px;
-      margin-bottom: 14px;
-      border-left: 4px solid #3EC9C2;
-      box-shadow: 0 2px 8px rgba(28,45,94,0.06);
-    }
-    .card h3 {
-      font-size: 15px;
-      font-weight: 800;
-      color: #1C2D5E;
-      margin-bottom: 8px;
-    }
-    .card p { margin-bottom: 0; font-size: 14px; }
-    .card.warn { border-left-color: #FFE566; }
-    .card.ai   { border-left-color: #C4A8F0; }
-
-    /* Data table */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-      font-size: 14px;
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(28,45,94,0.06);
-    }
-    th {
-      background: #1C2D5E;
-      color: white;
-      font-weight: 700;
-      padding: 12px 16px;
-      text-align: left;
-    }
-    td {
-      padding: 12px 16px;
-      border-bottom: 1px solid #EAE5DC;
-      color: #3d3d5c;
-      vertical-align: top;
-      line-height: 1.5;
-    }
-    tr:last-child td { border-bottom: none; }
-    tr:nth-child(even) td { background: #FAFAF8; }
-
-    /* Contact section */
-    .contact-box {
-      background: linear-gradient(135deg, #1C2D5E, #3A4F82);
-      border-radius: 20px;
-      padding: 32px;
-      text-align: center;
-      margin-top: 50px;
-    }
-    .contact-box h2 { font-size: 22px; font-weight: 800; color: white; margin-bottom: 8px; }
-    .contact-box p { color: rgba(255,255,255,0.7); margin-bottom: 20px; }
-    .contact-detail {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255,255,255,0.12);
-      border-radius: 12px;
-      padding: 12px 20px;
-      margin: 6px;
-      color: white;
-      font-weight: 700;
-      font-size: 14px;
-      text-decoration: none;
-    }
-
-    /* Footer */
-    .footer {
-      text-align: center;
-      padding: 30px 40px;
-      font-size: 12px;
-      color: #6B7A99;
-      font-weight: 600;
-      border-top: 1px solid #EAE5DC;
-      background: white;
-    }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy — Stokkd Fridge Mate</title>
+<style>
+  :root{--navy:#1C2D5E;--teal:#3EC9C2;--cream:#F6F3EE;--g400:#9E9E9E;--g500:#6B6B6B;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;background:var(--cream);color:var(--g500);line-height:1.8;}
+  .container{max-width:680px;margin:0 auto;padding:48px 24px 80px;}
+  .back{display:inline-block;color:var(--teal);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:24px;}
+  h1{font-size:28px;font-weight:800;color:var(--navy);margin-bottom:6px;}
+  .updated{font-size:13px;color:var(--g400);margin-bottom:32px;}
+  h2{font-size:18px;font-weight:700;color:var(--navy);margin:28px 0 10px;}
+  p{margin-bottom:14px;font-size:15px;}
+  .highlight{background:#fff;border-left:3px solid var(--teal);padding:16px 20px;border-radius:0 12px 12px 0;margin:16px 0;font-size:14px;}
+  .footer{text-align:center;margin-top:48px;font-size:12px;color:var(--g400);}
+  a{color:var(--teal);}
+</style>
 </head>
 <body>
-
-<!-- Header -->
-<div class="header">
-  <div class="header-logo">🧊</div>
+<div class="container">
+  <a href="index.html" class="back">&larr; Back</a>
   <h1>Privacy Policy</h1>
-  <div class="header-sub">Fridgy — Smart Fridge Tracker</div>
-  <span class="effective-badge">Effective Date: 1 January 2026</span>
+  <div class="updated">Last updated: April 2026</div>
+
+  <p>Stokkd Fridge Mate ("the App") is operated by Jax ("we", "us", "our"). We are committed to protecting your privacy. This policy explains how we collect, use, and safeguard your information.</p>
+
+  <h2>1. Information We Collect</h2>
+  <p><strong>Account Information:</strong> When you create an account, we collect your name and email address for authentication and communication purposes.</p>
+  <p><strong>App Data:</strong> Fridge and pantry inventory (item names, quantities, expiry dates), dietary preferences, shopping lists, and meal plans. This data is stored to provide the core functionality of the App.</p>
+  <p><strong>Usage Data:</strong> Anonymised analytics including feature usage frequency, session duration, and crash reports to help us improve the App.</p>
+  <p><strong>Subscription Data:</strong> Your subscription status (Free, Pro, or Family) is managed by Apple through the App Store. We do not collect or store payment information.</p>
+
+  <h2>2. AI Features and Data Processing</h2>
+  <div class="highlight">
+    Pro and Family subscribers have access to AI Chef, powered by Anthropic's Claude AI. Understanding how your data is used with AI is important to us.
+  </div>
+  <p><strong>What is sent to AI:</strong> When you use AI Chef, the following information is sent to our secure server to generate personalised recipe suggestions: your fridge and pantry contents (item names, expiry status, stock levels), your dietary preferences, and your conversation with AI Chef within the current session.</p>
+  <p><strong>What is NOT sent to AI:</strong> Your name, email address, location, device information, or any other personal identifiers are never included in AI requests.</p>
+  <p><strong>AI Processing:</strong> AI requests are processed through Anthropic's Claude API via our secure server. Your API key and all server-side credentials are never exposed to the App or your device. Anthropic processes data in accordance with their privacy policy at <a href="https://www.anthropic.com/privacy">anthropic.com/privacy</a>.</p>
+  <p><strong>Data Retention:</strong> AI conversation history is stored only in your current app session and is not persisted on our servers. Each AI request is stateless from the server's perspective.</p>
+
+  <h2>3. Fallback Logic</h2>
+  <p>If the AI service is temporarily unavailable due to server maintenance, network issues, or service interruptions, the App automatically falls back to built-in local recipe suggestions. Local fallback uses only on-device data and does not transmit any information externally. Local suggestions may be less personalised than AI-generated ones.</p>
+
+  <h2>4. How We Use Your Information</h2>
+  <p>We use your information to: provide and maintain the App's core features (fridge tracking, expiry alerts, recipe suggestions); generate AI-powered recipe recommendations for subscribers; improve the App through anonymised usage analytics; communicate important updates about the service.</p>
+
+  <h2>5. Data Sharing</h2>
+  <p>We do not sell, rent, or trade your personal information to third parties. We share data only with: Anthropic (for AI recipe generation, Pro/Family subscribers only, as described above); Apple (for subscription management via the App Store); analytics providers (anonymised data only, no personal identifiers).</p>
+
+  <h2>6. Data Security</h2>
+  <p>We implement industry-standard security measures to protect your data, including encrypted data transmission (HTTPS/TLS), secure server infrastructure hosted on Vercel, and API key management that ensures credentials are never exposed client-side.</p>
+
+  <h2>7. Data Storage and Location</h2>
+  <p>Your fridge and pantry data is stored locally on your device. AI requests are processed through servers that may be located outside Australia. By using AI features, you consent to this data processing.</p>
+
+  <h2>8. Your Rights</h2>
+  <p>You have the right to: access your personal data by contacting us; request deletion of your account and associated data; opt out of AI features by using the Free tier; export your fridge and pantry data.</p>
+
+  <h2>9. Children's Privacy</h2>
+  <p>The App is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal data, please contact us.</p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>We may update this policy from time to time. We will notify you of significant changes through the App or via email. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+  <h2>11. Contact Us</h2>
+  <p>If you have questions about this privacy policy or your data, please contact us at: <a href="mailto:sage.era.love@gmail.com">sage.era.love@gmail.com</a></p>
+
+  <div class="footer">
+    <p>&copy; 2026 Jax. Stokkd Fridge Mate.</p>
+  </div>
 </div>
-
-<!-- Quick nav -->
-<nav class="nav">
-  <a href="#summary">Summary</a>
-  <a href="#collect">What We Collect</a>
-  <a href="#ai">AI & Third Parties</a>
-  <a href="#use">How We Use Data</a>
-  <a href="#storage">Storage</a>
-  <a href="#rights">Your Rights</a>
-  <a href="#children">Children</a>
-  <a href="#changes">Changes</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<div class="content">
-
-  <!-- Plain English Summary -->
-  <div class="summary" id="summary">
-    <h2>🛡️ Plain English Summary</h2>
-    <ul>
-      <li>We collect only what we need — your email for sign-in and food item names you enter.</li>
-      <li>Your food data is stored locally on your device first. It never leaves your device without your knowledge.</li>
-      <li>When you use AI features, food item names are sent to Anthropic (Claude AI) to generate recipes. No personal data is included.</li>
-      <li>We do not sell your data. We do not share it with advertisers.</li>
-      <li>You can delete your account and all data at any time from within the app.</li>
-      <li>Subscriptions are managed by Apple — we never see your payment details.</li>
-    </ul>
-  </div>
-
-  <!-- 1. Who We Are -->
-  <div class="section" id="collect">
-    <div class="section-header">
-      <div class="section-icon">👤</div>
-      <div>
-        <div class="section-num">Section 1</div>
-        <h2>Who We Are</h2>
-      </div>
-    </div>
-    <p>FridgeMate is operated as an independent app by an individual developer based in Sydney, New South Wales, Australia. References to "we", "us", or "our" in this policy refer to the FridgeMate developer.</p>
-    <p>By using FridgeMate, you agree to the practices described in this Privacy Policy. If you do not agree, please do not use the app.</p>
-  </div>
-
-  <!-- 2. What We Collect -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon">📋</div>
-      <div>
-        <div class="section-num">Section 2</div>
-        <h2>Information We Collect</h2>
-      </div>
-    </div>
-
-    <table>
-      <tr>
-        <th>Data type</th>
-        <th>What it is</th>
-        <th>Why we collect it</th>
-        <th>Linked to you?</th>
-      </tr>
-      <tr>
-        <td><strong>Email address</strong></td>
-        <td>Your sign-in email</td>
-        <td>Account creation and authentication</td>
-        <td>Yes</td>
-      </tr>
-      <tr>
-        <td><strong>User ID</strong></td>
-        <td>Internal account identifier</td>
-        <td>Link your data across sessions</td>
-        <td>Yes</td>
-      </tr>
-      <tr>
-        <td><strong>Food item names</strong></td>
-        <td>Names you enter (e.g. "Cheddar", "Eggs")</td>
-        <td>Core app functionality — tracking your fridge</td>
-        <td>No</td>
-      </tr>
-      <tr>
-        <td><strong>Expiry dates</strong></td>
-        <td>Dates you enter or that are estimated</td>
-        <td>Expiry alerts and AI recipe generation</td>
-        <td>No</td>
-      </tr>
-      <tr>
-        <td><strong>Camera images</strong></td>
-        <td>Frames captured when using AI Detect</td>
-        <td>Food identification via Claude Vision AI</td>
-        <td>No — processed immediately, not stored</td>
-      </tr>
-      <tr>
-        <td><strong>Usage analytics</strong></td>
-        <td>Anonymous feature interaction data</td>
-        <td>Improve the app (only if you allow ATT)</td>
-        <td>No — fully anonymous</td>
-      </tr>
-      <tr>
-        <td><strong>Purchase history</strong></td>
-        <td>Which plan you're subscribed to</td>
-        <td>Unlock the correct features</td>
-        <td>Yes — managed by Apple</td>
-      </tr>
-    </table>
-
-    <div class="card">
-      <h3>📱 What we do NOT collect</h3>
-      <p>We do not collect your location, contacts, browsing history, photos from your library, microphone recordings, health data, or any information not listed above. We do not use advertising networks or data brokers.</p>
-    </div>
-  </div>
-
-  <!-- 3. AI & Third Parties -->
-  <div class="section" id="ai">
-    <div class="section-header">
-      <div class="section-icon">🤖</div>
-      <div>
-        <div class="section-num">Section 3</div>
-        <h2>AI Features &amp; Third-Party Services</h2>
-      </div>
-    </div>
-
-    <div class="card ai">
-      <h3>Anthropic (Claude AI) — Recipe generation, food detection &amp; waste prediction</h3>
-      <p>When you use AI features, FridgeMate sends your food item names and expiry dates to Anthropic's Claude API. <strong>No personal information (name, email, location) is included.</strong> Anthropic does not retain API request data beyond the duration of the request. Anthropic's privacy policy is available at <a href="https://www.anthropic.com/privacy" style="color:#3EC9C2">anthropic.com/privacy</a>.</p>
-    </div>
-
-    <div class="card">
-      <h3>Open Food Facts — Barcode scanner</h3>
-      <p>When you scan a barcode, the barcode number is sent to the Open Food Facts public API to look up product information. No personal data is transmitted. Open Food Facts is a free, open-source food database. Their privacy policy is at <a href="https://world.openfoodfacts.org/privacy" style="color:#3EC9C2">openfoodfacts.org/privacy</a>.</p>
-    </div>
-
-    <div class="card">
-      <h3>Apple (Sign In, Subscriptions &amp; StoreKit)</h3>
-      <p>If you sign in with Apple, your authentication is managed entirely by Apple. We receive only a unique user identifier and optionally your email (which Apple may relay or hide). Subscription payments are processed exclusively by Apple — we never see your payment card details. Apple's privacy policy is at <a href="https://www.apple.com/privacy" style="color:#3EC9C2">apple.com/privacy</a>.</p>
-    </div>
-
-    <div class="card">
-      <h3>Google (Sign In with Google)</h3>
-      <p>If you choose to sign in with Google, authentication is managed by Google OAuth. We receive your name and email address only. Google's privacy policy is at <a href="https://policies.google.com/privacy" style="color:#3EC9C2">policies.google.com/privacy</a>.</p>
-    </div>
-
-    <div class="card warn">
-      <h3>⚠️ AI feature opt-out</h3>
-      <p>You can disable all AI features at any time in <strong>Settings → AI &amp; Features → AI Recipe Generation</strong>. When disabled, no data is sent to Anthropic.</p>
-    </div>
-  </div>
-
-  <!-- 4. How We Use Data -->
-  <div class="section" id="use">
-    <div class="section-header">
-      <div class="section-icon">⚙️</div>
-      <div>
-        <div class="section-num">Section 4</div>
-        <h2>How We Use Your Information</h2>
-      </div>
-    </div>
-    <p>We use information only for the following purposes:</p>
-    <div class="card"><h3>App functionality</h3><p>Tracking your fridge and pantry contents, generating expiry alerts, producing AI recipe suggestions, and enabling shopping and meal planning features.</p></div>
-    <div class="card"><h3>Account management</h3><p>Authenticating you, syncing your data across your devices, and managing your subscription status.</p></div>
-    <div class="card"><h3>App improvement</h3><p>Anonymous, aggregated analytics (only collected if you grant App Tracking Transparency permission) to understand which features are used and improve them.</p></div>
-    <p>We do <strong>not</strong> use your data for advertising, profiling, or any purpose not listed above. We do not sell, rent, or trade your personal information to any third party.</p>
-  </div>
-
-  <!-- 5. Data Storage -->
-  <div class="section" id="storage">
-    <div class="section-header">
-      <div class="section-icon">💾</div>
-      <div>
-        <div class="section-num">Section 5</div>
-        <h2>Data Storage &amp; Security</h2>
-      </div>
-    </div>
-    <p>Your fridge, pantry, shopping, and meal plan data is stored <strong>locally on your device</strong> using iOS secure storage. If you create an account, your data may additionally be synchronised to our secure cloud database (Supabase, hosted in the EU/US) to enable multi-device access.</p>
-    <p>We implement reasonable technical and organisational measures to protect your data, including encrypted transit (HTTPS/TLS), encrypted storage at rest, and access controls. However, no system is 100% secure — please use a strong password and keep your device updated.</p>
-    <p>Camera frames captured for AI food detection are processed in real time and are <strong>never stored</strong> on our servers or on your device beyond the immediate analysis.</p>
-  </div>
-
-  <!-- 6. Your Rights -->
-  <div class="section" id="rights">
-    <div class="section-header">
-      <div class="section-icon">⚖️</div>
-      <div>
-        <div class="section-num">Section 6</div>
-        <h2>Your Rights &amp; Choices</h2>
-      </div>
-    </div>
-    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
-
-    <table>
-      <tr>
-        <th>Right</th>
-        <th>What it means</th>
-        <th>How to exercise it</th>
-      </tr>
-      <tr>
-        <td><strong>Access</strong></td>
-        <td>See what data we hold about you</td>
-        <td>Email us at hello@stokkdfridgemate.app</td>
-      </tr>
-      <tr>
-        <td><strong>Correction</strong></td>
-        <td>Fix inaccurate data</td>
-        <td>Edit in-app or email us</td>
-      </tr>
-      <tr>
-        <td><strong>Deletion</strong></td>
-        <td>Delete your account and all data</td>
-        <td>Settings → Delete My Account (in-app)</td>
-      </tr>
-      <tr>
-        <td><strong>Portability</strong></td>
-        <td>Export your data in a readable format</td>
-        <td>Email us at hello@stokkdfridgemate.app</td>
-      </tr>
-      <tr>
-        <td><strong>Withdraw consent</strong></td>
-        <td>Stop AI processing or analytics</td>
-        <td>Settings → AI &amp; Features (in-app)</td>
-      </tr>
-      <tr>
-        <td><strong>Restrict processing</strong></td>
-        <td>Limit how we use your data</td>
-        <td>Email us at hello@stokkdfridgemate.app</td>
-      </tr>
-    </table>
-
-    <div class="card">
-      <h3>🗑️ Account deletion</h3>
-      <p>You can delete your account at any time from within the app: <strong>Settings → Delete My Account</strong>. This permanently deletes all your data from our systems within 30 days. If you have an active subscription, please cancel it via <strong>Settings → Apple ID → Subscriptions</strong> before deleting your account to stop future charges.</p>
-    </div>
-  </div>
-
-  <!-- 7. Data Retention -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon">📅</div>
-      <div>
-        <div class="section-num">Section 7</div>
-        <h2>Data Retention</h2>
-      </div>
-    </div>
-    <p>We retain your data for as long as your account is active. When you delete your account, all personal data is permanently deleted within 30 days. Anonymous analytics data (if collected) may be retained in aggregated form indefinitely as it cannot be linked back to you.</p>
-    <p>Subscription records are retained for 7 years as required by Australian tax law, even after account deletion.</p>
-  </div>
-
-  <!-- 8. Children -->
-  <div class="section" id="children">
-    <div class="section-header">
-      <div class="section-icon">👶</div>
-      <div>
-        <div class="section-num">Section 8</div>
-        <h2>Children's Privacy</h2>
-      </div>
-    </div>
-    <p>FridgeMate is not directed at children under the age of 13 (or 16 in the EU/UK). We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us immediately at hello@stokkdfridgemate.app and we will delete it.</p>
-  </div>
-
-  <!-- 9. International Transfers -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon">🌍</div>
-      <div>
-        <div class="section-num">Section 9</div>
-        <h2>International Data Transfers</h2>
-      </div>
-    </div>
-    <p>FridgeMate is operated from Australia and may transfer data to service providers in the United States and European Union (Anthropic, Supabase, Apple). These transfers are subject to appropriate safeguards including Standard Contractual Clauses and the service providers' own compliance with applicable data protection law.</p>
-  </div>
-
-  <!-- 10. Changes -->
-  <div class="section" id="changes">
-    <div class="section-header">
-      <div class="section-icon">📝</div>
-      <div>
-        <div class="section-num">Section 10</div>
-        <h2>Changes to This Policy</h2>
-      </div>
-    </div>
-    <p>We may update this Privacy Policy from time to time. When we do, we will update the effective date at the top of this page and, for material changes, notify you via a notification within the app. Your continued use of Fridgy after changes are posted constitutes your acceptance of the updated policy.</p>
-  </div>
-
-  <!-- Contact -->
-  <div class="contact-box" id="contact">
-    <h2>📬 Contact Us</h2>
-    <p>Questions, data requests, or concerns about your privacy</p>
-    <a href="mailto:hello@stokkdfridgemate.app" class="contact-detail">✉️ hello@stokkdfridgemate.app</a>
-    <div class="contact-detail">📍 Sydney, New South Wales, Australia</div>
-    <br><br>
-    <p style="font-size:13px; color:rgba(255,255,255,0.5); margin-top:16px">
-      We aim to respond to all privacy enquiries within 5 business days.
-    </p>
-  </div>
-
-</div>
-
-<div class="footer">
-  Fridgy · Privacy Policy · Effective 1 January 2026 · Sydney, NSW, Australia<br>
-  © 2026 Fridgy. All rights reserved.
-</div>
-
 </body>
 </html>
