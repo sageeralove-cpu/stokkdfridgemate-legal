@@ -1,238 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service — Fridgy</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #1C2D5E; background: #F6F3EE; }
-    .header { background: linear-gradient(135deg, #1C2D5E, #3A4F82); padding: 48px 40px 40px; text-align: center; }
-    .header-logo { font-size: 40px; margin-bottom: 12px; }
-    .header h1 { font-size: 28px; font-weight: 800; color: white; }
-    .header-sub { font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 8px; font-weight: 600; }
-    .effective-badge { display: inline-block; margin-top: 16px; background: #3EC9C2; color: white; font-size: 12px; font-weight: 700; padding: 6px 16px; border-radius: 20px; }
-    .nav { background: white; padding: 16px 40px; display: flex; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid #EAE5DC; position: sticky; top: 0; z-index: 10; }
-    .nav a { font-size: 12px; font-weight: 700; color: #6B7A99; text-decoration: none; padding: 6px 14px; border-radius: 20px; background: #F6F3EE; }
-    .nav a:hover { background: #E5F7F6; color: #27A69F; }
-    .content { max-width: 780px; margin: 0 auto; padding: 40px 40px 80px; }
-    .summary { background: #E5F7F6; border: 2px solid #A8EDE9; border-radius: 16px; padding: 24px 28px; margin-bottom: 40px; }
-    .summary h2 { font-size: 16px; font-weight: 800; color: #27A69F; margin-bottom: 14px; }
-    .summary ul { list-style: none; }
-    .summary li { font-size: 14px; font-weight: 600; color: #1C2D5E; padding: 5px 0; display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
-    .summary li::before { content: "✓"; color: #3EC9C2; font-weight: 900; flex-shrink: 0; }
-    .section { margin-bottom: 40px; }
-    .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #EAE5DC; }
-    .section-icon { width: 42px; height: 42px; background: linear-gradient(135deg, #1C2D5E, #3A4F82); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
-    .section h2 { font-size: 20px; font-weight: 800; color: #1C2D5E; }
-    .section-num { font-size: 11px; font-weight: 700; color: #6B7A99; text-transform: uppercase; letter-spacing: 1px; }
-    p { font-size: 15px; line-height: 1.75; color: #3d3d5c; margin-bottom: 14px; }
-    .card { background: white; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; border-left: 4px solid #3EC9C2; box-shadow: 0 2px 8px rgba(28,45,94,0.06); }
-    .card h3 { font-size: 15px; font-weight: 800; color: #1C2D5E; margin-bottom: 8px; }
-    .card p { margin-bottom: 0; font-size: 14px; }
-    .card.warn { border-left-color: #FF7F6E; }
-    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(28,45,94,0.06); }
-    th { background: #1C2D5E; color: white; font-weight: 700; padding: 12px 16px; text-align: left; }
-    td { padding: 12px 16px; border-bottom: 1px solid #EAE5DC; color: #3d3d5c; vertical-align: top; line-height: 1.5; }
-    tr:last-child td { border-bottom: none; }
-    tr:nth-child(even) td { background: #FAFAF8; }
-    .contact-box { background: linear-gradient(135deg, #1C2D5E, #3A4F82); border-radius: 20px; padding: 32px; text-align: center; margin-top: 50px; }
-    .contact-box h2 { font-size: 22px; font-weight: 800; color: white; margin-bottom: 8px; }
-    .contact-box p { color: rgba(255,255,255,0.7); margin-bottom: 20px; }
-    .contact-detail { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.12); border-radius: 12px; padding: 12px 20px; margin: 6px; color: white; font-weight: 700; font-size: 14px; text-decoration: none; }
-    .footer { text-align: center; padding: 30px 40px; font-size: 12px; color: #6B7A99; font-weight: 600; border-top: 1px solid #EAE5DC; background: white; }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Terms of Service — Stokkd Fridge Mate</title>
+<style>
+  :root{--navy:#1C2D5E;--teal:#3EC9C2;--cream:#F6F3EE;--g400:#9E9E9E;--g500:#6B6B6B;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;background:var(--cream);color:var(--g500);line-height:1.8;}
+  .container{max-width:680px;margin:0 auto;padding:48px 24px 80px;}
+  .back{display:inline-block;color:var(--teal);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:24px;}
+  h1{font-size:28px;font-weight:800;color:var(--navy);margin-bottom:6px;}
+  .updated{font-size:13px;color:var(--g400);margin-bottom:32px;}
+  h2{font-size:18px;font-weight:700;color:var(--navy);margin:28px 0 10px;}
+  p{margin-bottom:14px;font-size:15px;}
+  .highlight{background:#fff;border-left:3px solid var(--teal);padding:16px 20px;border-radius:0 12px 12px 0;margin:16px 0;font-size:14px;}
+  .tier-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;}
+  .tier-table th,.tier-table td{padding:10px 14px;text-align:left;border-bottom:1px solid #E8E8E8;}
+  .tier-table th{background:var(--navy);color:#fff;font-weight:600;}
+  .tier-table tr:nth-child(even){background:#fff;}
+  .footer{text-align:center;margin-top:48px;font-size:12px;color:var(--g400);}
+  a{color:var(--teal);}
+</style>
 </head>
 <body>
-
-<div class="header">
-  <div class="header-logo">🧊</div>
+<div class="container">
+  <a href="/" class="back">&larr; Back</a>
   <h1>Terms of Service</h1>
-  <div class="header-sub">Fridgy — Smart Fridge Tracker</div>
-  <span class="effective-badge">Effective Date: 1 January 2026</span>
+  <div class="updated">Last updated: April 2026</div>
+
+  <p>By downloading, installing, or using Stokkd Fridge Mate ("the App"), you agree to be bound by these Terms of Service. If you do not agree, please do not use the App.</p>
+
+  <h2>1. Description of Service</h2>
+  <p>Stokkd Fridge Mate is an iOS application that helps users track fridge and pantry contents, receive expiry alerts, discover recipes, plan meals, and manage shopping lists. The App offers AI-powered features for subscribed users, powered by Anthropic's Claude AI.</p>
+
+  <h2>2. Subscription Plans</h2>
+  <p>The App operates on a freemium model with three tiers:</p>
+  <table class="tier-table">
+    <tr><th>Feature</th><th>Free</th><th>Pro (A$8.99/mo)</th><th>Family (A$14.99/mo)</th></tr>
+    <tr><td>Fridge items</td><td>Up to 15</td><td>Unlimited</td><td>Unlimited</td></tr>
+    <tr><td>Pantry items</td><td>Up to 5</td><td>Unlimited</td><td>Unlimited</td></tr>
+    <tr><td>AI recipes</td><td>None</td><td>30/month</td><td>60/month</td></tr>
+    <tr><td>AI scans</td><td>None</td><td>30/month</td><td>80/month</td></tr>
+    <tr><td>Barcode scans</td><td>None</td><td>100/month</td><td>300/month</td></tr>
+    <tr><td>Accounts</td><td>1</td><td>1</td><td>Up to 6</td></tr>
+    <tr><td>Meal planner</td><td>No</td><td>No</td><td>Yes</td></tr>
+    <tr><td>Ads</td><td>Yes</td><td>No</td><td>No</td></tr>
+  </table>
+
+  <h2>3. Free Trial and Billing</h2>
+  <p>Pro and Family subscriptions include a 7-day free trial. You will not be charged during the trial period. After the trial, your subscription will automatically renew at the applicable price unless cancelled at least 24 hours before the end of the current period.</p>
+  <p>Subscriptions are managed through the Apple App Store. Payment is charged to your Apple ID account. Prices are displayed in your local currency and may vary by region. All prices include applicable taxes.</p>
+
+  <h2>4. Subscription Expiry</h2>
+  <div class="highlight">
+    When a subscription expires or is cancelled, your account immediately reverts to the Free tier. This means: fridge tracking is limited to 15 items (excess items are preserved but hidden until you reduce below the limit or resubscribe); pantry tracking is limited to 5 items; AI Chef, barcode scanning, AI camera, and meal planner features become unavailable; ad-supported banner ads are re-enabled. Your data is never deleted when a subscription expires.
+  </div>
+
+  <h2>5. Usage Caps</h2>
+  <p>AI features are subject to monthly usage caps as described in the Subscription Plans table above. Usage caps reset on the 1st of each calendar month at 00:00 UTC. Unused quota does not carry over to the following month. If you reach your monthly cap, you will be notified and can continue using the App's non-AI features.</p>
+
+  <h2>6. AI Features and Disclaimers</h2>
+  <p><strong>AI Chef</strong> is powered by Anthropic's Claude AI and provides recipe suggestions based on your fridge and pantry contents. Important disclaimers:</p>
+  <p><strong>Not medical or nutritional advice:</strong> AI-generated recipes and nutritional information are approximate suggestions only. They should not replace professional dietary, medical, or nutritional advice. Always consult a healthcare professional for specific dietary needs.</p>
+  <p><strong>Allergy warning:</strong> AI Chef may not identify all potential allergens in suggested recipes. Users with food allergies or sensitivities must independently verify all ingredients before preparing any recipe.</p>
+  <p><strong>Nutritional accuracy:</strong> Calorie counts, kJ values, and macronutrient information are estimates based on standard serving sizes and publicly available food databases. Actual nutritional values may vary depending on brands, preparation methods, and portion sizes.</p>
+  <p><strong>Food safety:</strong> The App provides expiry date tracking as a guide only. Always use your own judgement regarding food safety. When in doubt, discard items that appear or smell spoiled, regardless of the tracked expiry date.</p>
+
+  <h2>7. Service Availability and Fallback</h2>
+  <p>AI features require an active internet connection. We strive to maintain high availability of our AI service but cannot guarantee uninterrupted access. If the AI service is temporarily unavailable due to server maintenance, network issues, third-party service disruptions, or unexpected technical problems, the App will automatically fall back to built-in local recipe suggestions.</p>
+  <p><strong>Fallback behaviour:</strong> Local suggestions are generated entirely on your device using a pre-built recipe database. They are based on common ingredient combinations but are less personalised than AI-generated recipes. No data is transmitted externally during fallback mode.</p>
+  <p><strong>No refunds for interruptions:</strong> Temporary AI service interruptions do not entitle users to refunds or subscription credits, as the App continues to provide core functionality (fridge tracking, expiry alerts, local recipes, shopping lists) during any AI downtime.</p>
+
+  <h2>8. Intellectual Property</h2>
+  <p>The App, including its design, code, content, and branding, is the intellectual property of Jax. AI-generated recipe suggestions are provided for your personal use and may not be commercially redistributed.</p>
+
+  <h2>9. User Conduct</h2>
+  <p>You agree to use the App only for its intended purpose of personal food management. You may not attempt to reverse engineer the App, exploit the AI service beyond normal usage, or use the App for any unlawful purpose.</p>
+
+  <h2>10. Limitation of Liability</h2>
+  <p>To the maximum extent permitted by law, we are not liable for any indirect, incidental, special, or consequential damages arising from your use of the App, including but not limited to foodborne illness, allergic reactions, or financial loss from food waste. The App is provided "as is" without warranties of any kind.</p>
+
+  <h2>11. Governing Law</h2>
+  <p>These Terms are governed by the laws of the State of New South Wales, Australia. Any disputes will be resolved in the courts of New South Wales.</p>
+
+  <h2>12. Changes to These Terms</h2>
+  <p>We reserve the right to modify these Terms at any time. Material changes will be communicated through the App or via email at least 14 days before taking effect. Continued use of the App after changes constitutes acceptance.</p>
+
+  <h2>13. Contact</h2>
+  <p>For questions about these Terms, contact us at: <a href="mailto:sage.era.love@gmail.com">sage.era.love@gmail.com</a></p>
+
+  <div class="footer">
+    <p>&copy; 2026 Jax. Stokkd Fridge Mate.</p>
+  </div>
 </div>
-
-<nav class="nav">
-  <a href="#acceptance">Acceptance</a>
-  <a href="#use">Permitted Use</a>
-  <a href="#subscriptions">Subscriptions</a>
-  <a href="#ai">AI Features</a>
-  <a href="#ip">Intellectual Property</a>
-  <a href="#liability">Liability</a>
-  <a href="#termination">Termination</a>
-  <a href="#governing">Governing Law</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<div class="content">
-
-  <div class="summary">
-    <h2>📋 Plain English Summary</h2>
-    <ul>
-      <li>By using FridgeMate you agree to these terms.</li>
-      <li>Fridgy is for personal household use — not for resale or commercial food businesses.</li>
-      <li>Subscriptions are billed by Apple and governed by their terms.</li>
-      <li>AI-generated recipes are suggestions only — always use your own judgement about food safety.</li>
-      <li>We are not liable for decisions you make based on the app's information.</li>
-      <li>You can cancel or delete your account at any time from within the app.</li>
-    </ul>
-  </div>
-
-  <!-- 1. Acceptance -->
-  <div class="section" id="acceptance">
-    <div class="section-header">
-      <div class="section-icon">✅</div>
-      <div><div class="section-num">Section 1</div><h2>Acceptance of Terms</h2></div>
-    </div>
-    <p>These Terms of Service ("Terms") govern your use of the Fridgy mobile application ("App"), operated by an individual developer based in Sydney, New South Wales, Australia ("we", "us", "our").</p>
-    <p>By downloading, installing, or using Fridgy, you agree to be bound by these Terms. If you do not agree, do not use the App.</p>
-    <p>These Terms should be read alongside our <a href="privacy-policy.html" style="color:#3EC9C2; font-weight:700;">Privacy Policy</a>, which is incorporated herein by reference.</p>
-  </div>
-
-  <!-- 2. Permitted Use -->
-  <div class="section" id="use">
-    <div class="section-header">
-      <div class="section-icon">✔️</div>
-      <div><div class="section-num">Section 2</div><h2>Permitted &amp; Prohibited Use</h2></div>
-    </div>
-    <p>Fridgy is licensed for personal, non-commercial household use. You may use the App to track your food, generate recipes, manage shopping lists, and plan meals for yourself and your household.</p>
-    <div class="card warn">
-      <h3>🚫 You may NOT:</h3>
-      <p>
-        • Use Fridgy for commercial food service operations or resale purposes<br>
-        • Reverse engineer, decompile, or copy the App or its AI systems<br>
-        • Attempt to circumvent subscription restrictions or feature locks<br>
-        • Use the App to store or distribute harmful, unlawful, or offensive content<br>
-        • Share your account credentials with anyone outside your family plan members<br>
-        • Use automated tools to interact with the App's AI features beyond normal use
-      </p>
-    </div>
-  </div>
-
-  <!-- 3. Subscriptions -->
-  <div class="section" id="subscriptions">
-    <div class="section-header">
-      <div class="section-icon">💳</div>
-      <div><div class="section-num">Section 3</div><h2>Subscriptions &amp; Payments</h2></div>
-    </div>
-
-    <table>
-      <tr><th>Plan</th><th>Price (AUD approx.)</th><th>Features</th></tr>
-      <tr><td><strong>Free</strong></td><td>A$0</td><td>Fridge (15 items), Pantry (5 items), basic alerts</td></tr>
-      <tr><td><strong>Pro Monthly</strong></td><td>~A$8.99/month</td><td>Unlimited items, AI recipes, barcode scanner, AI detect, waste prediction</td></tr>
-      <tr><td><strong>Pro Yearly</strong></td><td>~A$5.39/month (billed annually)</td><td>Same as Pro Monthly — save ~40%</td></tr>
-      <tr><td><strong>Family Monthly</strong></td><td>~A$14.99/month</td><td>Everything in Pro + 6 accounts, shared lists, meal planning, nutrition AI</td></tr>
-      <tr><td><strong>Family Yearly</strong></td><td>~A$8.99/month (billed annually)</td><td>Same as Family Monthly — save ~40%</td></tr>
-    </table>
-
-    <div class="card">
-      <h3>Apple App Store billing</h3>
-      <p>All payments are processed by Apple Inc. through the App Store. Your payment information is held by Apple — we never see your card details. By purchasing a subscription, you also agree to <a href="https://www.apple.com/legal/internet-services/itunes/au/terms.html" style="color:#3EC9C2;">Apple's Media Services Terms</a>.</p>
-    </div>
-    <div class="card">
-      <h3>Free trial</h3>
-      <p>New subscribers may be offered a 7-day free trial. At the end of the trial, your subscription begins automatically unless you cancel at least 24 hours before the trial ends.</p>
-    </div>
-    <div class="card">
-      <h3>Cancellation &amp; refunds</h3>
-      <p>You may cancel your subscription at any time via <strong>Settings → Apple ID → Subscriptions → Fridgy</strong>. Cancellation takes effect at the end of the current billing period. Refunds are subject to Apple's refund policy — request refunds at <a href="https://reportaproblem.apple.com" style="color:#3EC9C2;">reportaproblem.apple.com</a>.</p>
-    </div>
-    <div class="card">
-      <h3>Fair use limits</h3>
-      <p>AI features are subject to monthly fair use limits (30–80 AI actions/month depending on plan) to ensure service quality for all users. Limits reset on the 1st of each month. These are visible in Settings → Monthly Usage.</p>
-    </div>
-  </div>
-
-  <!-- 4. AI Features -->
-  <div class="section" id="ai">
-    <div class="section-header">
-      <div class="section-icon">🤖</div>
-      <div><div class="section-num">Section 4</div><h2>AI-Generated Content</h2></div>
-    </div>
-    <p>Fridgy uses Anthropic's Claude AI to generate recipe suggestions, identify food from camera images, and predict food waste. You acknowledge that:</p>
-    <div class="card warn">
-      <h3>⚠️ Important — food safety</h3>
-      <p>AI-generated recipes and food identification are <strong>suggestions only</strong>. Always use your own judgement about food safety, allergens, and dietary requirements. Fridgy is not a registered dietitian, nutritionist, or food safety authority. Do not rely solely on the app for decisions about food safety or health.</p>
-    </div>
-    <div class="card">
-      <h3>AI accuracy</h3>
-      <p>AI-generated content may be inaccurate or incomplete. We make no warranties about the accuracy of recipe suggestions, estimated expiry dates, nutritional information, or food identification results. AI models can make errors.</p>
-    </div>
-    <div class="card">
-      <h3>Data sent to AI</h3>
-      <p>When you use AI features, food item names and expiry dates are sent to Anthropic. No personal information is included. See our Privacy Policy for full details.</p>
-    </div>
-  </div>
-
-  <!-- 5. Intellectual Property -->
-  <div class="section" id="ip">
-    <div class="section-header">
-      <div class="section-icon">©️</div>
-      <div><div class="section-num">Section 5</div><h2>Intellectual Property</h2></div>
-    </div>
-    <p>Fridgy and all its content, features, and functionality — including the App's design, code, AI prompts, and branding — are owned by the developer and protected by Australian and international copyright law.</p>
-    <p>You retain ownership of the data you enter into the App (your food lists, meal plans, etc.). You grant us a limited licence to process that data solely to provide the App's features to you.</p>
-    <p>You may not copy, reproduce, distribute, or create derivative works from any part of the App without our written permission.</p>
-  </div>
-
-  <!-- 6. Liability -->
-  <div class="section" id="liability">
-    <div class="section-header">
-      <div class="section-icon">⚖️</div>
-      <div><div class="section-num">Section 6</div><h2>Limitation of Liability</h2></div>
-    </div>
-    <p>To the maximum extent permitted by Australian Consumer Law, Fridgy is provided "as is" without warranties of any kind. We do not warrant that the App will be error-free, uninterrupted, or that AI-generated content will be accurate.</p>
-    <div class="card warn">
-      <h3>Our liability to you</h3>
-      <p>We are not liable for any loss of data, food waste, illness, injury, or financial loss arising from use of or reliance on the App. Our total liability to you in any circumstance is limited to the amount you paid for your subscription in the 12 months preceding the claim.</p>
-    </div>
-    <p>Nothing in these Terms excludes rights you have under Australian Consumer Law that cannot be excluded, including guarantees about acceptable quality and fitness for purpose.</p>
-  </div>
-
-  <!-- 7. Termination -->
-  <div class="section" id="termination">
-    <div class="section-header">
-      <div class="section-icon">🚪</div>
-      <div><div class="section-num">Section 7</div><h2>Termination</h2></div>
-    </div>
-    <p>You may delete your account and stop using Fridgy at any time via <strong>Settings → Delete My Account</strong>.</p>
-    <p>We reserve the right to suspend or terminate your access if you breach these Terms, misuse the AI features, or engage in fraudulent behaviour. In such cases, no refund of subscription fees will be provided.</p>
-    <p>Upon termination, your licence to use the App ends immediately. Sections 5, 6, and 8 survive termination.</p>
-  </div>
-
-  <!-- 8. Governing Law -->
-  <div class="section" id="governing">
-    <div class="section-header">
-      <div class="section-icon">🏛️</div>
-      <div><div class="section-num">Section 8</div><h2>Governing Law</h2></div>
-    </div>
-    <p>These Terms are governed by the laws of New South Wales, Australia. Any disputes will be subject to the exclusive jurisdiction of the courts of New South Wales, Australia.</p>
-    <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will continue in full force.</p>
-  </div>
-
-  <!-- 9. Changes -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon">📝</div>
-      <div><div class="section-num">Section 9</div><h2>Changes to These Terms</h2></div>
-    </div>
-    <p>We may update these Terms from time to time. Material changes will be notified via an in-app notification at least 14 days before they take effect. Continued use of the App after changes take effect constitutes acceptance of the updated Terms.</p>
-  </div>
-
-  <!-- Contact -->
-  <div class="contact-box" id="contact">
-    <h2>📬 Questions or Concerns?</h2>
-    <p>Get in touch — we respond within 5 business days</p>
-    <a href="mailto:hello@stokkdfridgemate.app" class="contact-detail">✉️ hello@stokkdfridgemate.app</a>
-    <div class="contact-detail">📍 Sydney, New South Wales, Australia</div>
-  </div>
-
-</div>
-
-<div class="footer">
-  Fridgy · Terms of Service · Effective 1 January 2026 · Sydney, NSW, Australia<br>
-  © 2026 Fridgy. All rights reserved.
-</div>
-
 </body>
 </html>
